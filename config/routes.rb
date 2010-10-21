@@ -6,6 +6,10 @@ Glob::Application.routes.draw do
   get "users/edit"
   resources :users, :user_sessions
 
+  resources :posts do
+    resources :comments
+  end
+
   match "/login" => "user_sessions#new", :as => :login
   match "/logout" => "user_session#destroy", :as => :logout
 
