@@ -1,0 +1,13 @@
+<div class="expanded_link">
+  <h2 class="link_title"><%= link_to @link.title, @link.url %></h2>
+  <h3 class="post_info">by <%= link_author(@link.user_id) %> @ <%= @link.created_at %></h3>
+
+  <p class="post_body">
+    <%= @link.body %><br /><br />
+    Link -- <%= link_to @link.url, @link.url %>
+
+  </p>
+
+  <%= link_to 'Back to Links', links_path %>
+
+</div>

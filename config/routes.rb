@@ -13,6 +13,8 @@ Glob::Application.routes.draw do
     resources :comments
   end
 
+  resources :links
+
   root :to => "home#index"
 
   match "/login" => "user_sessions#new", :as => :login

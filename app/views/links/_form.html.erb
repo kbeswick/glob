@@ -1,0 +1,22 @@
+<%= form_for (@link) do |f| %>
+  <% if @link.errors.any? %>
+    <h2>You made <%= pluralize(@link.errors.count, "error") %> mistakes filling out this form! Fix them!</h2>
+  <% end %>
+
+  <div class="field">
+    <h3 class="other"><%= f.label :title %></h3>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <h3 class="other"><%= f.label :url %></h3>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <h3 class="other"><%= f.label :body %></h3>
+    <%= f.text_area :body %>
+  </div>
+  <br />
+  <div class="buttons">
+    <%= f.submit %>
+  </div>
+<% end %>
