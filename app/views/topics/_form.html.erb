@@ -1,0 +1,10 @@
+<%= form.fields_for :topics do |topic_form| %>
+  <%= topic_form.text_field :name %>
+
+  <% unless topic_form.object.nil? || topic_form.object.new_record? %>
+    <div class="field">
+      <%= topic_form.label :_destroy, 'Remove:' %>
+      <%= topic_form.check_box :_destroy %>
+    </div>
+  <% end %>
+<% end %>

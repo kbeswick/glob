@@ -1,0 +1,24 @@
+<% @post.topics.build %>
+<%= form_for (@post) do |f| %>
+  <% if @post.errors.any? %>
+    <h2>You made <%= pluralize(@post.errors.count, "error") %> mistakes filling out this form! Fix them!</h2>
+  <% end %>
+
+  <div class="field">
+    <h3 class="other"><%= f.label :title %></h3>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <h3 class="other"><%= f.label :content %></h3>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <h3 class="other">Tags</h3>
+    <%= render :partial => 'topics/form', :locals => {:form => f} %>
+  </div>
+  <br />
+  <div class="buttons">
+    <%= f.submit %>
+  </div>
+<% end %>
+

@@ -1,0 +1,118 @@
+body {
+  background-color: white;
+  font-family: Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+a:link {
+  font-size: 1.6em;
+  text-decoration: none;
+  color: magenta;
+}
+a:visited {
+  font-size: 1.6em;
+  text-decoration: none;
+  color: magenta;
+}
+a:hover {
+  font-size: 1.6em;
+  text-decoration: underline;
+  color: red;
+}
+
+div#user_nav {
+  text-align: right;
+  margin-right: 2em;
+}
+
+div#user_nav a {
+  font-size: 2em;
+}
+div#header h1 {
+  font-size: 6em;
+  letter-spacing: -0.5px;
+  color: blue;
+  letter-spacing: -5px;
+  line-height: 1em;
+  text-align: center;
+}
+div#header h1 a {
+  color: blue;
+  text-decoration: none;
+}
+
+div#container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+div#footer p {
+  text-align: center;
+  font-size: 2em;
+  font-weight: lighter;
+  letter-spacing: -2px;
+}
+h2.more_posts {
+  font-size: 4.5em;
+  letter-spacing: -3px;
+  color: grey;
+}
+h3.other {
+  font-size: 3em;
+  letter-spacing: -2px;
+  color: grey;
+  margin-bottom: -7px;
+}
+
+div.expanded_post {
+}
+h2.link_title
+{
+  font-size: 3em;
+  color: orange;
+  letter-spacing: -4px;
+  margin-bottom: -15px;
+}
+h2.link_title a
+{
+  color: orange;
+}
+h2.post_title
+{
+  font-size: 3em;
+  color: red;
+  letter-spacing: -4px;
+  margin-bottom: -15px;
+}
+h2.post_title a
+{
+  color: red;
+}
+p { font-size: 1.6em; }
+span { font-size: 1.6em; }
+p.post_body {
+  margin-top: -20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+div.post_footer {
+  background-color: #CCAADD;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+h3.post_info {
+  color: green;
+  font-size: 3.5em;
+  letter-spacing: -3px;
+  margin-left: 15px;
+  margin-top: -5px;
+}
+h3.post_topics {
+  margin-top: -15px;
+  font-size: 2.5em;
+  word-spacing: 3px;
+  color: brown;
+}
+div.more_posts {
+  margin-top: -20px;
+}

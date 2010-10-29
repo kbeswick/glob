@@ -1,14 +1,19 @@
 Glob::Application.routes.draw do
+  get "home/index"
+
   get "user_sessions/new"
 
   get "users/new"
 
   get "users/edit"
-  resources :users, :user_sessions
+  resources :users
+  resources :user_sessions
 
   resources :posts do
     resources :comments
   end
+
+  root :to => "home#index"
 
   match "/login" => "user_sessions#new", :as => :login
   match "/logout" => "user_session#destroy", :as => :logout

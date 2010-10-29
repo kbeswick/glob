@@ -1,18 +1,18 @@
-<% title "Log in" %>  
-  
-<% form_for @user_session do |form| %>  
-<%= form.error_messages %>  
-<ol class="formList">  
-  <li>  
-    <%= form.label :username, "Username" %>  
-    <%= form.text_field :username %>  
-  </li>  
-  <li>  
-    <%= form.label :password, "Password" %>  
-    <%= form.password_field :password %>  
-  </li>  
-  <li>  
-    <%= form.submit "Submit" %>  
-  </li>  
-</ol>  
-<% end %>  
+<h2 class="more_posts">Login</h2>
+<% form_for @user_session do |form| %>
+  <% if @user_session.errors.any? %>
+    <h2>The username or password you provided is incorrect</h2>
+  <% end %>
+  <div class="field">
+    <h3 class="other"><%= form.label :username, "Username" %></h3>
+    <%= form.text_field :username %>
+  </div>
+  <div class="field">
+    <h3 class="other"><%= form.label :password, "Password" %></h3>
+    <%= form.password_field :password %>
+  </div>
+  <br />
+  <div class="buttons">
+    <%= form.submit "Submit" %>
+  </div>
+<% end %>

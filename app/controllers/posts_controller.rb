@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.order("created_at DESC")
 
     respond_to do |format|
       format.html
@@ -19,7 +19,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params[:post])
-    
+    @post.user_id = current_user.id
+
     respond_to do |format|
       if @post.save
         format.html { redirect_to(@post, :notice => 'Post was successfully created') }
@@ -33,6 +34,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @author = User.find(@post.user_id)
 
     respond_to do |format|
       format.html
