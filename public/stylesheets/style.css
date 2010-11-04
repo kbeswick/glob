@@ -133,3 +133,15 @@ h3.post_topics {
 div.more_posts {
   margin-top: -20px;
 }
+input[type="text"]{
+  font-size: 2.5em;
+  font-family: Helvetica, sans-serif
+}
+input[type="password"]{
+  font-size: 2.5em;
+}
+textarea {
+  font-size: 2em;
+  font-family: Helvetica, sans-serif;
+}
+
