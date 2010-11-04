@@ -1,11 +1,6 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.order("created_at DESC")
-
-    respond_to do |format|
-      format.html
-      format.xml { render :xml => @posts }
-    end
   end
 
   def new

@@ -5,11 +5,13 @@
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
+  <%= auto_discovery_link_tag(:rss, :controller => "posts", :format => :rss) %>
 </head>
 <body>
   <div id="user_nav">
     <% if current_user %>
       <span>Signed in as <%= current_user.username %></span>&nbsp;&nbsp;&nbsp;
+      <%= link_to "Admin", admin_path %>&nbsp;&nbsp;&nbsp;
       <%= link_to "Edit profile", edit_user_path(:current) %>&nbsp;&nbsp;&nbsp;
       <%= link_to "Logout", logout_path %>
     <% else %>
@@ -23,7 +25,7 @@
     <%= yield %>
   </div>
   <div id="footer">
-    <p>POWERED BY GLOB - <a href="http://www.github.com/kbeswick/glob">@github</a></p>
+    <p>POWERED BY GLOB - <a href="http://www.github.com/kbeswick/glob">@github</a> | <%= link_to "RSS", posts_url(:rss) %></p>
   </div>
 </body>
 </html>
