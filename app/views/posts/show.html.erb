@@ -1,7 +1,9 @@
-<div class="expanded_post">
-  <h2 class="post_title"><%=h @post.title %></h2>
+<div class="main_listing">
+  <h2 class="post_title"><%= link_to @post.title, @post %></h2>
+  <% if current_user then %>
+    <span>&nbsp;&nbsp;&nbsp;<%= link_to "Edit", edit_post_path(@post) %> | <%= link_to 'Delete', @post, :confirm => 'Are you sure?', :method => :delete %></span>
+  <% end %>
   <h3 class="post_info">by <%=h @author.username %> @ <%=h @post.created_at %></h3>
-
   <p class="post_body">
   <%=h @post.content %>
   </p>

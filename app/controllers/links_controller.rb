@@ -1,6 +1,6 @@
 class LinksController < ApplicationController
   def index
-    @links = Link.all
+    @links = Link.order("created_at DESC")
 
     respond_to do |format|
       format.html

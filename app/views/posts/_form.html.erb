@@ -6,11 +6,11 @@
 
   <div class="field">
     <h3 class="other"><%= f.label :title %></h3>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :size => 87 %>
   </div>
   <div class="field">
     <h3 class="other"><%= f.label :content %></h3>
-    <%= f.text_area :content %>
+    <%= f.text_area :content, :cols => 100, :rows => 25 %>
   </div>
   <div class="field">
     <h3 class="other">Tags</h3>

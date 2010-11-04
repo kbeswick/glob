@@ -5,15 +5,15 @@
 
   <div class="field">
     <h3 class="other"><%= f.label :title %></h3>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :size => 80 %>
   </div>
   <div class="field">
     <h3 class="other"><%= f.label :url %></h3>
-    <%= f.text_field :url %>
+    <%= f.text_field :url, :size => 80 %>
   </div>
   <div class="field">
     <h3 class="other"><%= f.label :body %></h3>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :cols => 92, :rows => 20 %>
   </div>
   <br />
   <div class="buttons">

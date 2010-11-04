@@ -1,0 +1,15 @@
+<h2 class="more_posts">Welcome</h2>
+<div id="main_listing">
+  <% link_count = 0 %>
+  <% @posts.each do |post| %>
+    <% while link_count < @links.length and @links[link_count].created_at > post.created_at do %>
+      <%= render @links[link_count] %>
+      <% link_count += 1 %>
+    <% end %>
+    <%= render post %>
+  <% end %>
+  <% while link_count < @links.length do %>
+    <%= render @links[link_count] %>
+    <% link_count +=1 %>
+  <% end %>
+</div>

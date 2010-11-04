@@ -1,12 +1,12 @@
 <div id="main_listing">
   <!-- List five (configurable) posts/links, then just titles of the rest -->
     <% count = 0 %>
-    <% @posts.each do |post| %>
+    <% @links.each do |link| %>
       <% count += 1 %>
       <% if count <= 5 then %>
-        <%= render post %>
+        <%= render link %>
       <% else %>
-        <h2 class="post_title"><%= link_to count.to_s() + '- ' + post.title, post %></h2>
+        <h2 class="link_title"><%= link_to count.to_s() + '- ' + link.title, link %></h2>
       <% end %>
     <% end %>
     <br />

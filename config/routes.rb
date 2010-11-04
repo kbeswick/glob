@@ -18,7 +18,8 @@ Glob::Application.routes.draw do
   root :to => "home#index"
 
   match "/login" => "user_sessions#new", :as => :login
-  match "/logout" => "user_session#destroy", :as => :logout
+  match "/logout" => "user_sessions#destroy", :as => :logout
+  match "/admin" => "admin#index", :as => :admin
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
