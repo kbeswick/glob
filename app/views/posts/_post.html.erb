@@ -1,11 +1,11 @@
 <div class="post_listing">
   <h2 class="post_title"><%= link_to post.title, post %></h2>
   <% if current_user then %>
-     <span>&nbsp;&nbsp;&nbsp;<%= link_to "Edit", edit_post_path(post) %> | <%= link_to 'Delete', post, :confirm => 'Are you sure?', :method => :delete %></span>
+    <p class="admin_options">&nbsp;&nbsp;<%= link_to "Edit", edit_post_path(post) %> | <%= link_to 'Delete', post, :confirm => 'Are you sure?', :method => :delete %></p>
   <% end %>
   <h3 class="post_info">by <%=h post_author(post.user_id) %> at <%=h post.created_at %></h3>
   <p class="post_body">
-     <%=h post.content %>
+  <%=  h(post.content).gsub(/\n/, '<br />') %>
   </p>
   <br />
   <h3 class="post_topics">Filed Under: <%= post.topics.map { |t| t.name }.join(", ") %></h3>
