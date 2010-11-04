@@ -3,10 +3,13 @@
     <% count = 0 %>
     <% @posts.each do |post| %>
       <% count += 1 %>
-      <% if count <= 5 then %>
+      <% if count < APPCFG['previewable_posts'].to_i then %>
         <%= render post %>
+      <% elsif count == APPCFG['previewable_posts'].to_i then %>
+        <%= render post %>
+        <h2 class="more_posts">Older Posts</h2>
       <% else %>
-        <h2 class="post_title"><%= link_to count.to_s() + '- ' + post.title, post %></h2>
+        <h2 class="post_title"><%= link_to post.title, post %></h2>
       <% end %>
     <% end %>
     <br />
