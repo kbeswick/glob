@@ -3,10 +3,10 @@
   <% if current_user then %>
     <p class="admin_options">&nbsp;&nbsp;<%= link_to "Edit", edit_post_path(post) %> | <%= link_to 'Delete', post, :confirm => 'Are you sure?', :method => :delete %></p>
   <% end %>
-  <h3 class="post_info">by <%=h post_author(post.user_id) %> at <%=h post.created_at %></h3>
-  <p class="post_body">
-  <%=  h(post.content).gsub(/\n/, '<br />') %>
-  </p>
+  <h3 class="post_info">by <%=h post_author(post.user_id) %> on <%=h clean_date(post.created_at) %></h3>
+  <div class="post_body">
+  <%= raw post.rendered_content %>
+  </div>
   <br />
   <h3 class="post_topics">Filed Under: <%= post.topics.map { |t| t.name }.join(", ") %></h3>
 </div>

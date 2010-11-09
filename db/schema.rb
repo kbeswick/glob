@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20101021220104) do
     t.string   "url"
     t.integer  "user_id"
     t.text     "body"
+    t.text     "rendered_body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -35,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20101021220104) do
     t.string   "title"
     t.text     "content"
     t.integer  "user_id"
+    t.text     "rendered_content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

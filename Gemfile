@@ -7,7 +7,7 @@ gem 'rails', '3.0.1'
 
 gem 'pg'
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
-
+gem 'rdiscount'
 # Use unicorn as the web server
 # gem 'unicorn'
 

@@ -93,14 +93,14 @@ h2.post_title a
 }
 p { font-size: 1.5em; }
 span { font-size: 1.5em; }
-p.post_body {
-  margin-top: -20px;
+div.post_body {
+  margin-top: -15px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
 }
-p.link_body {
-  margin-top: -20px;
+div.link_body {
+  margin-top: -15px;
   padding-left: 10px;
   padding-right: 10px;
 

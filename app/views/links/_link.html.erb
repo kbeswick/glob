@@ -3,8 +3,8 @@
   <% if current_user then %>
     <p class="admin_options">&nbsp;&nbsp;<%= link_to "Edit", edit_link_path(link) %> | <%= link_to 'Delete', link, :confirm => 'Are you sure?', :method => :delete %></p>
   <% end %>
-  <h3 class="post_info">from <%=h link.url.gsub(/http:\/\//, "").gsub(/\/.*/, "") %> at <%=h link.created_at %></h3>
-  <p class="link_body">
-    <%= link.body %>
-  </p>
+  <h3 class="post_info">from <%=h link.url.gsub(/http:\/\//, "").gsub(/\/.*/, "") %> on <%=h clean_date(link.created_at) %></h3>
+  <div class="link_body">
+    <%= raw link.rendered_body %>
+  </div>
 </div>
