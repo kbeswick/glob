@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
     def current_user_session
       return @current_user_session if defined?(@current_user_session)
       @current_user_session = UserSession.find
-   end
+    end
 
     def current_user
       @current_user = current_user_session && current_user_session.record
@@ -27,6 +27,7 @@ class ApplicationController < ActionController::Base
         flash[:notice] = "You must be logged out to access this page"
         redirect_to user_path(:current)
         return false
+      end
     end
 
     def store_location
