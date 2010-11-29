@@ -1,4 +1,6 @@
 class LinksController < ApplicationController
+  before_filter :require_user, :only => [:new, :create, :edit, :update, :destroy]
+
   def index
     @links = Link.order("created_at DESC")
 

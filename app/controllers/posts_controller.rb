@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_filter :require_user, :only => [:new, :create, :update, :edit, :destroy]
+
   def index
     @posts = Post.order("created_at DESC")
   end
