@@ -8,7 +8,7 @@ xml.instruct! :xml, :version => "1.0"
         for post in @posts
           xml.item do
           xml.title post.title
-          xml.description post.content
+          xml.description post.rendered_content
           xml.pubDate post.created_at.to_s(:rfc822)
           xml.link post_url(post)
           xml.guid post_url(post, :rss)

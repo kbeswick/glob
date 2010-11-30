@@ -1,11 +1,11 @@
 <div>
-  <h2 class="other">Welcome, <%= current_user.username %></h2>
+  <h2 class="more_posts">Welcome, <%= current_user.username %></h2>
 </div>
 <div>
-  <h3>What would you like to do?</h3>
-  <ul>
-    <li><%= link_to 'Add a new post', new_post_path %></li>
-    <li><%= link_to 'View/Edit/Delete posts', posts_path %></li>
-    <li><%= link_to 'Add a new link', new_link_path %></li>
-    <li><%= link_to 'View/Edit/Delete links', links_path %></li>
+  <h3 class="other">What would you like to do?</h3>
+  <ul class="no_bullet">
+    <li class="menu"><%= link_to 'Add a new post', new_post_path %></li>
+    <li class="menu"><%= link_to 'Add a new link', new_link_path %></li>
+    <li class="menu"><%= link_to 'View/Edit/Delete posts', posts_path %></li>
+    <li class="menu"><%= link_to 'View/Edit/Delete links', links_path %></li>
 </div>

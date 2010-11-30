@@ -9,7 +9,7 @@
     <%= f.text_field :title, :size => 56 %>
   </div>
   <div class="field">
-    <h3 class="other"><%= f.label :content %></h3>
+    <h3 class="other"><%= f.label :content %> </h3><span>&nbsp;Uses Markdown <%= link_to "(Reference)", "http://warpedvisions.org/projects/markdown-cheat-sheet/" %></span>
     <%= f.text_area :content, :cols => 70, :rows => 15 %>
   </div>
   <div class="field">

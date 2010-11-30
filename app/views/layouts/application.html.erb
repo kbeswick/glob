@@ -23,9 +23,10 @@
       <h1><a href="/"><%= APPCFG['site_title'] %></a></h1>
     </div>
     <div id="navigation">
-      <%= link_to "About", about_path %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<%= link_to "Posts", posts_path %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<%= link_to "Links", links_path %>
+      <p>A compendium of <%= link_to "posts", posts_path %> and <%= link_to "links", links_path %> by <%= link_to "Kevin Beswick", about_path %></p>
     </div>
     <%= yield %>
+  <div class="clearfooter"></div>
   </div>
   <div id="footer">
     <p>POWERED BY GLOB - <a href="http://www.github.com/kbeswick/glob">@github</a> | <%= link_to "RSS", posts_url(:rss) %></p>

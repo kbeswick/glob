@@ -3,6 +3,9 @@ body {
   font-family: Helvetica, sans-serif;
   font-size: 62.5%;
 }
+html, body {
+  height: 100%;
+}
 a:link {
   text-decoration: none;
   color: magenta;
@@ -17,12 +20,10 @@ a:hover {
 }
 div#navigation {
   text-align: center;
-  font-size: 2em;
-  margin-top: -50px;
+  font-size: 1.8em;
+  margin-top: -25px;
 }
-div#navigation a {
-  font-size: 1.2em;
-}
+
 div#user_nav {
   text-align: right;
   margin-right: 2em;
@@ -32,7 +33,7 @@ div#user_nav a {
   font-size: 2em;
 }
 div#header h1 {
-  font-size: 9.5em;
+  font-size: 6.5em;
   color: blue;
   letter-spacing: -5px;
   line-height: 0.75em;
@@ -47,6 +48,18 @@ div#header h1 a {
 div#container {
   width: 800px;
   margin: 0 auto;
+  min-height: 100%;
+  margin-bottom: -100px;
+  position: relative;
+
+}
+div.clearfooter {
+  height: 100px;
+  clear: both;
+}
+div#footer {
+  height: 100px;
+  position: relative;
 }
 
 div#footer p {
@@ -71,10 +84,9 @@ div.expanded_post {
 }
 h2.link_title
 {
-  font-size: 3.5em;
+  font-size: 3em;
   color: orange;
-  letter-spacing: -3px;
-  margin-bottom: -15px;
+  margin-bottom: -10px;
 }
 h2.link_title a
 {
@@ -82,10 +94,9 @@ h2.link_title a
 }
 h2.post_title
 {
-  font-size: 3.5em;
+  font-size: 3em;
   color: red;
-  letter-spacing: -3px;
-  margin-bottom: -15px;
+  margin-bottom: -10px;
 }
 h2.post_title a
 {
@@ -93,14 +104,13 @@ h2.post_title a
 }
 p { font-size: 1.5em; }
 span { font-size: 1.5em; }
+li { font-size: 1.5em; }
 div.post_body {
-  margin-top: -15px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
 }
 div.link_body {
-  margin-top: -15px;
   padding-left: 10px;
   padding-right: 10px;
 
@@ -119,9 +129,9 @@ div.post_footer {
 }
 h3.post_info {
   color: green;
-  font-size: 2.5em;
-  letter-spacing: -2.5px;
-  margin-left: 15px;
+  font-size: 2em;
+  font-weight: lighter;
+  margin-left: 10px;
   margin-top: -5px;
 }
 h3.post_topics {
@@ -144,4 +154,20 @@ textarea {
   font-size: 2em;
   font-family: Helvetica, sans-serif;
 }
-
+div#about_container {
+  width: 600px;
+  margin: 0 auto;
+}
+div#avatar {
+  float:left;
+  padding-right: 10px;
+}
+p#about {
+  padding-top: 10px;
+}
+ul.no_bullet {
+  list-style-type: none;
+}
+li.menu {
+  font-size: 2.5em;
+}
